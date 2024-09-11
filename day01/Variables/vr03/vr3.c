@@ -1,17 +1,22 @@
+//Challenge 3 : Conversion de la distance
+//Écrivez un programme qui demande la distance en kilomètres et la transforme en yards. Formule :
+
+//Yards = Km * 1093.61
+
 #include <stdio.h>
 
 int main() {
-    float kmh, ms;
+    float kilometres, yards;
 
-    // Demander la vitesse en kilomètres par heure
-    printf("Entrez la vitesse en km/h : ");
-    scanf("%f", &kmh);
+    // Demander la distance en kilometres
+    printf("Entrez la distance en kilomètres : ");
+    scanf("%f", &kilometres);
 
-    // Conversion km/h en m/s
-    ms = kmh * 0.27778;
+    // Conversion kilometres en yards
+    yards = kilometres * 1093.61;
 
-    // Affichage du résultat
-    printf("La vitesse en m/s est : %.2f\n", ms);
+    // Affichage du resultat
+    printf("La distance en yards est : %.2f\n", yards);
 
     return 0;
 }

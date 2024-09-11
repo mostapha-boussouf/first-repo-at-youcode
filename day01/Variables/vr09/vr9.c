@@ -1,18 +1,26 @@
+//Challenge 9 : Calcul de la distance entre deux points dans un espace 3D
+//Ã‰crivez un programme C pour trouver la distance entre deux points donnÃ©s dans un espace 3D. Formule :
+
+//Distance = âˆš((x2-x1)Â² + (y2-y1)Â² + (z2-z1)Â²)
+
 #include <stdio.h>
 #include <math.h>
 
 int main() {
-    float rayon, volume;
+    float x1, y1, z1, x2, y2, z2, distance;
 
-    // Demander à l'utilisateur de saisir le rayon de la sphère
-    printf("Entrez le rayon de la sphère : ");
-    scanf("%f", &rayon);
+    // Saisie des coordonnÃ©es des deux points
+    printf("Entrez x1, y1, z1 : ");
+    scanf("%f %f %f", &x1, &y1, &z1);
 
-    // Calculer le volume de la sphère
-    volume = (4.0 / 3.0) * M_PI * pow(rayon, 3);
+    printf("Entrez x2, y2, z2 : ");
+    scanf("%f %f %f", &x2, &y2, &z2);
 
-    // Afficher le résultat
-    printf("Le volume de la sphère avec un rayon de %.2f est %.2f\n", rayon, volume);
+    // Calcul de la distance
+    distance = sqrt((x2 - x1)*(x2 - x1) + (y2 - y1)*(y2 - y1) + (z2 - z1)*(z2 - z1));
+
+    // Affichage du rÃ©sultat
+    printf("Distance = %.2f\n", distance);
 
     return 0;
 }

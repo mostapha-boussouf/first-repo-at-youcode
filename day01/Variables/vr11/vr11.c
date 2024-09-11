@@ -1,23 +1,27 @@
+//Challenge 11 : Surface d'un rectangle
+//Écrivez un programme pour trouver la surface d'un rectangle. Prenez la longueur et la largeur du rectangle en entrée de l'utilisateur. Formule pour la surface d'un rectangle :
+
+//Surface = longueur * largeur
+
+#include <stdio.h>
+
 #include <stdio.h>
 
 int main() {
-    int nombre, mille, cent, dix, unite, inverse;
+    float longueur, largeur, surface;
 
-    // Demander à l'utilisateur de saisir un nombre entier à 4 chiffres
-    printf("Entrez un nombre entier à quatre chiffres : ");
-    scanf("%d", &nombre);
+    // Saisie de la longueur et de la largeur du rectangle
+    printf("Entrez la longueur du rectangle : ");
+    scanf("%f", &longueur);
 
-    // Extraire chaque chiffre
-    mille = nombre / 1000;        // Extraire le chiffre des milliers
-    cent = (nombre / 100) % 10;   // Extraire le chiffre des centaines
-    dix = (nombre / 10) % 10;     // Extraire le chiffre des dizaines
-    unite = nombre % 10;          // Extraire le chiffre des unités
+    printf("Entrez la largeur du rectangle : ");
+    scanf("%f", &largeur);
 
-    // Inverser l'ordre des chiffres
-    inverse = unite * 1000 + dix * 100 + cent * 10 + mille;
+    // Calcul de la surface
+    surface = longueur * largeur;
 
-    // Afficher le nombre inversé
-    printf("L'inverse de %d est %d\n", nombre, inverse);
+    // Affichage du résultat
+    printf("La surface du rectangle est : %.2f\n", surface);
 
     return 0;
 }

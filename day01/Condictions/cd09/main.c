@@ -1,3 +1,7 @@
+//Challenge 9 : Vérification d'Alphabet
+//Écrivez un programme C qui lit un caractère et détermine s'il fait partie des alphabets ou non. Et s'il l'est,
+// dire en plus s’il est une minuscule ou une majuscule.
+
 #include <stdio.h>
 
 int main() {

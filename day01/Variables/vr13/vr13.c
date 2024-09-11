@@ -1,3 +1,6 @@
+//Challenge 13 : Affichage des valeurs binaire et hexadécimale équivalentes
+//Écrivez un programme C pour afficher la valeur équivalente en binaire et en hexadécimal. Entrez un nombre entier et affichez ses valeurs équivalentes en binaire et en hexadécimal.
+
 #include <stdio.h>
 
 int main() {
@@ -7,12 +10,15 @@ int main() {
     printf("Entrez un nombre entier : ");
     scanf("%d", &nombre);
 
-    // Vérifier si le nombre est pair ou impair
-    if (nombre % 2 == 0) {
-        printf("Le nombre %d est pair.\n", nombre);
-    } else {
-        printf("Le nombre %d est impair.\n", nombre);
+    // Afficher la valeur hexadécimale
+    printf("Valeur en hexadécimal : %X\n", nombre);
+
+    // Afficher la valeur binaire
+    printf("Valeur en binaire : ");
+    for (int i = 31; i >= 0; i--) {
+        printf("%d", (nombre >> i) & 1);
     }
+    printf("\n");
 
     return 0;
 }

@@ -1,3 +1,6 @@
+//Challenge 13 : Point sur un Segment
+//Écrivez un programme C qui lit les coordonnées des deux extrémités d'un segment, et lit ensuite les coordonnées d'un point dans le plan et dit si ce dernier se trouve ou non sur le segment.
+
 #include <stdio.h>
 
 // Fonction pour vérifier si un point est sur un segment

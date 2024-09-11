@@ -1,24 +1,30 @@
+//Challenge 6 : Calcul et affichage des résultats
+//Deux nombres réels, a et b, sont saisis au clavier. Calculez et affichez a + b, a - b, a * b, et a / b avec précision décimale.
+
 #include <stdio.h>
 
 int main() {
-    float nombre1, nombre2, nombre3;
-    float moyenne_ponderee;
+    float a, b;
 
-    // Saisie des trois nombres
-    printf("Entrez le premier nombre : ");
-    scanf("%f", &nombre1);
+    // Saisie des deux nombres réels
+    printf("Entrez le premier nombre (a) : ");
+    scanf("%f", &a);
 
-    printf("Entrez le deuxième nombre : ");
-    scanf("%f", &nombre2);
+    printf("Entrez le deuxieme nombre (b) : ");
+    scanf("%f", &b);
 
-    printf("Entrez le troisième nombre : ");
-    scanf("%f", &nombre3);
+    // Calculs et affichage des résultats
+    printf("\resultats :\n");
+    printf("a + b = %.2f\n", a + b);
+    printf("a - b = %.2f\n", a - b);
+    printf("a * b = %.2f\n", a * b);
 
-    // Calcul de la moyenne pondérée
-    moyenne_ponderee = (nombre1 * 2 + nombre2 * 3 + nombre3 * 5) / (2 + 3 + 5);
-
-    // Affichage du résultat
-    printf("La moyenne pondere est : %.2f\n", moyenne_ponderee);
+    // Vérification pour éviter la division par zéro
+    if (b != 0) {
+        printf("a / b = %.2f\n", a / b);
+    } else {
+        printf("La division par zéro est impossible.\n");
+    }
 
     return 0;
 }

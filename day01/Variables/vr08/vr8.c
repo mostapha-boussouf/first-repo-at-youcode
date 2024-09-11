@@ -1,3 +1,8 @@
+//Challenge 8 : Calcul de la moyenne géométrique
+//Écrivez un programme en C pour trouver la moyenne géométrique de trois nombres saisis par l'utilisateur. Formule :
+
+//Moyenne géométrique = (a * b * c)^(1/3)
+
 #include <stdio.h>
 #include <math.h>  // Inclure la bibliothèque mathématique pour utiliser pow()
 

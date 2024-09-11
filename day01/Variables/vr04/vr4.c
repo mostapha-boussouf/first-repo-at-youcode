@@ -1,20 +1,22 @@
+//Challenge 4 : Conversion de la vitesse
+//Écrivez un programme qui demande la vitesse en kilomètres par heure (km/h) et la transforme en mètres par seconde (m/s). Formule :
+
+//    m/s = km/h * 0.27778
+
 #include <stdio.h>
 
 int main() {
-    float celsius;
+    float kmh, ms;
 
-    // Demander la température en Celsius
-    printf("Entrez la température en Celsius : ");
-    scanf("%f", &celsius);
+    // Demander la vitesse en kilomètres par heure
+    printf("Entrez la vitesse en km/h : ");
+    scanf("%f", &kmh);
 
-    // Vérifier l'état de l'eau en fonction de la température
-    if (celsius < 0) {
-        printf("L'eau est à l'état solide (glace).\n");
-    } else if (celsius >= 0 && celsius < 100) {
-        printf("L'eau est à l'état liquide.\n");
-    } else {
-        printf("L'eau est à l'état gazeux (vapeur).\n");
-    }
+    // Conversion km/h en m/s
+    ms = kmh * 0.27778;
+
+    // Affichage du résultat
+    printf("La vitesse en m/s est : %.2f\n", ms);
 
     return 0;
 }

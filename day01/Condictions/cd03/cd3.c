@@ -1,31 +1,26 @@
+//Challenge 3 : Somme de Deux Valeurs
+//Écrivez un programme C pour calculer la somme de deux valeurs entières données.
+// Si les deux valeurs sont identiques, le programme doit renvoyer le triple de leur somme.
 #include <stdio.h>
-#include <math.h>
 
 int main() {
-    float a, b, c, discriminant, racine1, racine2;
+    int valeur1, valeur2, somme;
 
-    // Entrée des coefficients a, b et c
-    printf("Entrez les coefficients a, b et c :\n");
-    scanf("%f %f %f", &a, &b, &c);
+    // Saisie des deux valeurs
+    printf("Entrez la premiere valeur : ");
+    scanf("%d", &valeur1);
+    printf("Entrez la deuxieme valeur : ");
+    scanf("%d", &valeur2);
 
-    // Calcul du discriminant
-    discriminant = b * b - 4 * a * c;
+    // Vérification si les deux valeurs sont identiques
+    if (valeur1 == valeur2) {
+        somme = 3 * (valeur1 + valeur2); // Triple de la somme si les deux valeurs sont identiques
+    } else {
+        somme = valeur1 + valeur2; // Simple somme si les deux valeurs sont différentes
+    }
 
-    // Cas où le discriminant est positif (deux solutions réelles)
-    if (discriminant > 0) {
-        racine1 = (-b + sqrt(discriminant)) / (2 * a);
-        racine2 = (-b - sqrt(discriminant)) / (2 * a);
-        printf("Deux solutions réelles : %.2f et %.2f\n", racine1, racine2);
-    }
-    // Cas où le discriminant est nul (une solution réelle)
-    else if (discriminant == 0) {
-        racine1 = -b / (2 * a);
-        printf("Une solution réelle : %.2f\n", racine1);
-    }
-    // Cas où le discriminant est négatif (pas de solution réelle)
-    else {
-        printf("Pas de solution réelle.\n");
-    }
+    // Affichage du résultat
+    printf("Le resultat est : %d\n", somme);
 
     return 0;
 }

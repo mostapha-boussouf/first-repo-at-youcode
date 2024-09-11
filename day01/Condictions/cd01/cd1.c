@@ -1,3 +1,6 @@
+//Challenge 1 : Paire ou Impaire
+//Écrivez un programme qui demande un nombre et affiche si ce nombre est pair ou impair.
+
 #include <stdio.h>
 
 int main() {

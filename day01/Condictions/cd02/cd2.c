@@ -1,24 +1,31 @@
+//Challenge 2 : Voyelle ou Non
+//Écrivez un programme en C qui vérifie si un caractère saisi par l'utilisateur est une voyelle ou non en utilisant l'instruction switch case.
 #include <stdio.h>
 
 int main() {
-    int valeur1, valeur2, somme;
+    char caractere;
 
-    // Demander à l'utilisateur de saisir deux valeurs entières
-    printf("Entrez la première valeur entière : ");
-    scanf("%d", &valeur1);
+    // Saisie du caractère
+    printf("Entrez un caractère : ");
+    scanf("%c", &caractere);
 
-    printf("Entrez la deuxième valeur entière : ");
-    scanf("%d", &valeur2);
-
-    // Vérifier si les deux valeurs sont identiques
-    if (valeur1 == valeur2) {
-        somme = 3 * (valeur1 + valeur2);  // Renvoie le triple de leur somme si identiques
-    } else {
-        somme = valeur1 + valeur2;  // Sinon, renvoie simplement la somme
+    // Utilisation du switch pour vérifier si le caractère est une voyelle
+    switch (caractere) {
+        case 'a':
+        case 'e':
+        case 'i':
+        case 'o':
+        case 'u':
+        case 'A':
+        case 'E':
+        case 'I':
+        case 'O':
+        case 'U':
+            printf("%c est une voyelle.\n", caractere);
+            break;
+        default:
+            printf("%c n'est pas une voyelle.\n", caractere);
     }
-
-    // Afficher la somme ou le triple de la somme
-    printf("Le résultat est : %d\n", somme);
 
     return 0;
 }
